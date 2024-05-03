@@ -24,15 +24,16 @@ async function movie(url) {
 }
 
 function act(value) {
-  const mov = `http://www.omdbapi.com/?apikey=${apiKey}&s=${value}`;
+  const mov = `https://www.omdbapi.com/?apikey=${apiKey}&s=${value}`;
   movie(mov);
   console.log(mov);
 }
 
 
 
-searchBtn.addEventListener('click', function() {
+searchBtn.addEventListener('click',  function() {
   const input = document.querySelector('.input').value;
+  console.log("salam",input);
   if(input!==""){
     act(input);
   } else{
